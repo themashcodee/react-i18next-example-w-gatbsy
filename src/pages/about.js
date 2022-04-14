@@ -1,21 +1,22 @@
+import { graphql } from 'gatsby';
 import * as React from "react"
-import { graphql } from "gatsby"
 
 import { useTranslation } from 'react-i18next'
-import { Layout } from '../components/layout'
+import { Layout } from '../components/layout';
 
-const IndexPage = () => {
+const About = () => {
   const { t } = useTranslation();
 
   return (
     <Layout>
-      <p>{t('greeting', { page: "Home Page" })}</p>
+      <p>{t('greeting', { page: "About Page" })}</p>
       <p>{t('welcome')}</p>
+      <p>{t('about')}</p>
     </Layout>
   )
 }
 
-export default IndexPage
+export default About
 
 export const query = graphql`
   query ($language: String!) {
